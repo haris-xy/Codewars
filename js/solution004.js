@@ -1,7 +1,10 @@
-
-function opposite(number) {
-    console.log(number * -1);
-
+function areYouPlayingBanjo(name) {
+  if (name.charAt(0) == "R" || name.charAt(0) == "r"){
+    console.log (`${name} plays banjo`) 
+  } else {
+    console.log (`${name} does not play banjo`)
   }
-  
-  opposite (20);
+  return name;
+}
+
+areYouPlayingBanjo("rupert")
