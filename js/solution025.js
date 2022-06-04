@@ -11,3 +11,12 @@ function abbrevName(name){
     let secondLet = name.IndexOf(' ') + 1
     return firstLet.toUpperCase() + '.' + name[secondLet].toUpperCase()
 }
+
+
+//solution updated:
+
+function abbrevName(name){
+
+    var nameArray = name.split(" ");
+    return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+  }
