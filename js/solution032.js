@@ -20,3 +20,10 @@ function greet(name){
   }
 
 
+// Oor
+
+let greet = name => (name == "Johnny") ? "Hello, my love!" : "Hello, " + name + "!"
+
+// Oor
+
+let greet = name => `Hello, ${name == "Johnny" ? "my love" : name}!`;
