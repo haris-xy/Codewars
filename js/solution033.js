@@ -10,10 +10,14 @@ For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should r
 */
 
 function countPositivesSumNegatives(input) {
-
+    if (input.length == 0 || input == null ){
+      return []  
+    } else{
     positiveArray = input.filter(x=>Math.sign(x)===1).length
     negativeArray = input.filter(x=>Math.sign(x)===-1).reduce((total, current) => {
             return total + current;
         }, 0);
+      
     return [positiveArray,negativeArray]
-    }
+      }
+      }
