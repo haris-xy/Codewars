@@ -4,3 +4,13 @@
 function invert(array) {
     return array.map(x => x * -1)
  }
+
+ //OOORR
+
+function invert(array) {
+    let newArr = [];
+    for(let i = 0; i < array.length; i++){
+      newArr.push(-array[i]);
+    }
+     return newArr;
+  }
