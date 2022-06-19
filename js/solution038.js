@@ -7,3 +7,9 @@ function sum (numbers) {
     nsum += numbers[i]
       return nsum
   };
+
+  //Oorr
+
+function sum(numbers) {
+    return numbers.reduce((a, b) => a + b, 0);
+  }
