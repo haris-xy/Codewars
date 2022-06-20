@@ -13,3 +13,6 @@ function hero(bullets, dragons){
     // OOrr
 
 return bullets/dragons >= 2 ? true : false
+
+//Oorr
+return bullets >= dragons * 2
