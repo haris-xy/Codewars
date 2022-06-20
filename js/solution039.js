@@ -9,3 +9,7 @@ function hero(bullets, dragons){
       return true }
       else {return false}
     }
+
+    // OOrr
+
+return bullets/dragons >= 2 ? true : false
