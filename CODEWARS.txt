@@ -98,34 +98,7 @@ const bmi = (w, h, bmi = w/h/h) =>  bmi <= 18.5 ? "Underweight" :
 
 
 
-/* Write a function which calculates the average of the numbers in a given list.
 
-Note: Empty arrays should return 0. 
-*/
-
-
-function find_average(array) {
-  return array.length>0 ?
-    array.reduce((a,b)=>a+b)/array.length : 0
-}
-
-
-
- /*
- Build a function that returns an array of integers from n to 1 where n>0.
-
-Example : n=5 --> [5,4,3,2,1]
-*/
-
-const reverseSeq = n => {
-    let arr = [];
-      for (let i=n; i>0; i--) {
-        arr.push(i);
-        } return arr;
-    };
-
-// OOrr
-const reverseSeq = length => Array.from({length}, () => length--)
 
 
 /*
@@ -321,4 +294,50 @@ The array will never be empty.
 
 function getAverage(marks){
 return Math.floor(marks.reduce((a,b) => a + b) / marks.length)
+}
+
+
+
+
+/*
+Complete the solution so that it reverses all of the words within the string passed in.
+
+Example(Input --> Output):
+
+"The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+*/
+
+function reverseWords(str){
+  let newArr = str.split(" ");
+  newArr.reverse();  
+return str = newArr.join(" ")
+}
+
+//Ooorr
+
+const reverseWords = s => s
+  .split` `
+  .reverse()
+  .join` `;
+
+//Ooorr
+return str.split(" ").reverse().join(" ")
+
+
+/*
+Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+*/
+
+function smash (words) {
+   return words.join(" ")
+};
+
+
+/*
+Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+*/
+
+function grow(x){
+return x.reduce((a,b) => a * b) 
 }
