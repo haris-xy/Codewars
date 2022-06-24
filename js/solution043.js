@@ -8,3 +8,23 @@ let min = function(list){
 let max = function(list){
    return Math.max(...list)
 }
+
+//Oorr
+
+let min = function(list){
+    let min =list[0];
+    for(let i=0; i<list.length; i++){
+       let cur = list[i];
+       if (cur<min) min=cur;
+    }
+    return min;
+}
+
+let max = function(list){
+    let max =list[0];
+    for(let i=0; i<list.length; i++){
+       let cur = list[i];
+       if (cur>max) max=cur;
+    }
+    return max;
+}
