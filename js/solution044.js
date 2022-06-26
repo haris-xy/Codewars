@@ -21,3 +21,8 @@ function DNAtoRNA(dna) {
     return dna.split("T").join("U");
   }
   
+  //Oor
+
+function DNAtoRNA(dna) {
+    return dna.replace(/t/gi, 'U');
+  }
