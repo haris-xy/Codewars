@@ -18,3 +18,6 @@ function check(a, x) {
 function check(a, x) {
     return a.includes(x) ? true : false
   }
+
+  //Oor
+const check = (a,x) => a.includes(x);
