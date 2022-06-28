@@ -21,3 +21,10 @@ function check(a, x) {
 
   //Oor
 const check = (a,x) => a.includes(x);
+
+
+//Oor
+
+function check(a,x){
+    return a.includes(x);
+  };
