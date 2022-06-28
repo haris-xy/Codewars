@@ -38,3 +38,9 @@ function check(a,x){
     }
     return false
   }
+
+  // ooRR
+
+ function check(a,x){
+    return (a.filter(v=>v==x)).length > 0
+  }
