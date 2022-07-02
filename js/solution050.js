@@ -11,3 +11,10 @@ function reverseWords(str){
     newArr.reverse();  
   return str = newArr.join(" ")
   }
+
+  //Ooorr
+
+const reverseWords = s => s
+.split` `
+.reverse()
+.join` `;
