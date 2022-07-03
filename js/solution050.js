@@ -18,3 +18,6 @@ const reverseWords = s => s
 .split` `
 .reverse()
 .join` `;
+
+//Ooorr
+return str.split(" ").reverse().join(" ")
