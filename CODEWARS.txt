@@ -1,100 +1,19 @@
-/*
-Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+//Write a function to split a string and convert it into an array of words.
 
-Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
-*/
-
-function paperwork(n, m) {
-if (n > 0 && m > 0)
-  return n*m 
-  else return 0
+function stringToArray(string){
+return string.split(" ")
 }
 
 
-OOr
+//Implement a function which multiplies two numbers.
 
-function paperwork(n, m) {
-return (n > 0 && m> 0)? n*m : 0
+function multiply(a,b){
+return a*b
 }
-
-
-/* Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
-*/
-
-function sum (numbers) {
-  let nsum = 0;  
-  for (let i = 0; i < numbers.length; i +=1)
-  nsum += numbers[i]
-    return nsum
-};
 
 //Oorr
 
-function sum(numbers) {
-  return numbers.reduce((a, b) => a + b, 0);
-}
-
-
-
-/*
-A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
-
-Return True if yes, False otherwise :)
-*/
-
-function hero(bullets, dragons){
-if  (bullets/ dragons >= 2) {
-  return true }
-  else {return false}
-}
-
-// OOrr
-
-return bullets/dragons >= 2 ? true : false
-
-//Oorr
-  return bullets >= dragons * 2
-
-
-/*
-Write a function which calculates the average of the numbers in a given list.
-
-Note: Empty arrays should return 0.
-*/
-
-function find_average(array) {
-  return newArray = array.reduce((a,b) => a + b, 0) / array.length  
-}
- 
-
-
-//////////////////// BELOW NOT PUSHED!!! 
-
-
-
-/*
-Write function bmi that calculates body mass index (bmi = weight / height2).
-
-if bmi <= 18.5 return "Underweight"
-
-if bmi <= 25.0 return "Normal"
-
-if bmi <= 30.0 return "Overweight"
-
-if bmi > 30 return "Obese"
-*/
-
-function bmi(weight, height) {
-  let calBmi = (weight / (height*height))
-  return calBmi <= 18.5 ? "Underweight"
-  :  calBmi <= 25.0 ? "Normal"
-  :  calBmi <= 30.0 ? "Overweight"
-  :  "Obese"
-}
-
-const bmi = (w, h, bmi = w/h/h) =>  bmi <= 18.5 ? "Underweight" :
-                                    bmi <= 25 ? "Normal" :
-                                    bmi <= 30 ? "Overweight" : "Obese";
+const multiply = (a,b) => a*b
 
 
 
@@ -102,242 +21,59 @@ const bmi = (w, h, bmi = w/h/h) =>  bmi <= 18.5 ? "Underweight" :
 
 
 /*
-Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
+After a hard quarter in the office you decide to get some rest on a vacation. So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+
+You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers.
+
+Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+Write a code that gives out the total amount for different days(d).
 */
 
-let min = function(list){
-    return Math.min(...list)
-}
-let max = function(list){
-   return Math.max(...list)
-}
-
-
-
-//Oorr
-
-let min = function(list){
-    let min =list[0];
-    for(let i=0; i<list.length; i++){
-       let cur = list[i];
-       if (cur<min) min=cur;
-    }
-    return min;
+function rentalCarCost(d) {
+return d < 3 ? (d * 40)
+      : d < 7 ? (d * 40) - 20
+      : (d * 40) - 50
 }
 
-let max = function(list){
-    let max =list[0];
-    for(let i=0; i<list.length; i++){
-       let cur = list[i];
-       if (cur>max) max=cur;
-    }
-    return max;
+//Ooor
+
+function rentalCarCost(d) {
+if (d < 3){
+return (d*40)
+} 
+else if (d < 7){
+return (d*40) - 20
+}
+else return (d * 40) - 50
 }
 
 
 
-/*
-Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of four nucleic acid bases Guanine ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
 
-Ribonucleic acid, RNA, is the primary messenger molecule in cells. RNA differs slightly from DNA its chemical structure and contains no Thymine. In RNA Thymine is replaced by another nucleic acid Uracil ('U').
+// Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
 
-Create a function which translates a given DNA string into RNA.
-
-For example:
-
-"GCAT"  =>  "GCAU"
-The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
-*/
-
-function DNAtoRNA(dna){
-  return dna.replace(/T/g, 'U');
-}
-
-//Orr
-
-function DNAtoRNA(dna) {
-  return dna.split("T").join("U");
-}
-
-
-//Oor
-
-function DNAtoRNA(dna) {
-  return dna.replace(/t/gi, 'U');
-}
-
-
-
-/*
-You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
-
-Array can contain numbers or strings. X can be either.
-
-Return true if the array contains the value, false if not.
-
-*/
-
-function check(a, x) {
-  if (a.includes(x))
-  return true
-  else return false
-}
-
-
-// OOrr
-
-function check(a, x) {
-  return a.includes(x) ? true : false
-}
-
-//Oor
-const check = (a,x) => a.includes(x);
-
-
-//Oor
-
-function check(a,x){
-  return a.includes(x);
-};
-
-
-//oor
-
- function check(a,x){
-    for (let i=0; i<a.length;i++){
-      console.log(a[i])
-      if (a[i]==x){ return true }
-    }
-    return false
+const countSheep = function (num){
+  let text = ""
+  for (let i = 1; i <= num; i++) {
+    text += i + ' sheep...'
   }
-
-// ooRR
-
- function check(a,x){
-    return (a.filter(v=>v==x)).length > 0
-  }
-
-
-
-/*
-You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
-
-Considering these factors, write a function that tells you if it is possible to get to the pump or not.
-
-Function should return true if it is possible and false if not.
-*/
-
-const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
- return distanceToPump/mpg <= fuelLeft
-};
-
-
-
-//This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
-
-function simpleMultiplication(number) {
-if (number % 2 == 0) {
-  return number * 8
-} else {
-  return number * 9
-}
+  return text;
 }
 
 //Oorr
-
-function simpleMultiplication(number) {
-return number % 2 == 0 ? number * 8 : number * 9
-}
-
-
-//Oor
-
-function simpleMultiplication(n) {
-    return n * (n % 2 ? 9 : 8);
-}
-
+countSheep=n=>[...Array(n).keys()].map(x=>`${x+1} sheep...`).join``
 
 
 /*
-There was a test in your class and you passed it. Congratulations!
-But you're an ambitious person. You want to know if you're better than the average student in your class.
-
-You receive an array with your peers' test scores. Now calculate the average and compare your score!
-
-Return True if you're better, else False!
-
-Note:
-Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array! */
-
-function betterThanAverage(classPoints, yourPoints) {
-  let average = classPoints.reduce((a,b) => a + b) /classPoints.length;
-  return average < yourPoints
-}
-
-
-//Ooorr
-
-function betterThanAverage(classPoints, yourPoints) {
-  return yourPoints > classPoints.reduce((a, b) => a + b) / classPoints.length; 
-}
-
-
-
-
-/*
-It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
-
-Return the average of the given array rounded down to its nearest integer.
-
-The array will never be empty.
+Create a function with two arguments that will return an array of the first (n) multiples of (x).
+Assume both the given number and the number of times to count will be positive numbers greater than 0.
 */
 
-function getAverage(marks){
-return Math.floor(marks.reduce((a,b) => a + b) / marks.length)
-}
-
-
-
-
-/*
-Complete the solution so that it reverses all of the words within the string passed in.
-
-Example(Input --> Output):
-
-"The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
-*/
-
-function reverseWords(str){
-  let newArr = str.split(" ");
-  newArr.reverse();  
-return str = newArr.join(" ")
-}
-
-//Ooorr
-
-const reverseWords = s => s
-  .split` `
-  .reverse()
-  .join` `;
-
-//Ooorr
-return str.split(" ").reverse().join(" ")
-
-
-/*
-Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
-*/
-
-function smash (words) {
-   return words.join(" ")
-};
-
-
-/*
-Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
-[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
-*/
-
-function grow(x){
-return x.reduce((a,b) => a * b) 
+function countBy(x, n) {
+  let z = []; 
+  for (let i = 1; i <= n; i++) {
+    z.push(x * i)
+  }
+  return z 
 }
