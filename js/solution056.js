@@ -7,3 +7,6 @@ const countSheep = function (num){
     }
     return text;
   }
+
+  //Oorr
+countSheep=n=>[...Array(n).keys()].map(x=>`${x+1} sheep...`).join``
